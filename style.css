@@ -3,18 +3,145 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-#song-card {
-  width: 300px;
-  height: 350px;
+#image-card {
+  width: 400px;
+  height: 450px;
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  top: 25vh;
+  top: 15vh;
+  border-radius: 30px;
+  overflow: hidden;
+  transition: 300ms;
 }
 
-#song-card img {
+#image-card:hover {
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 55);
+}
+
+#image-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+#image-card-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+    0deg; rgba(0, 0, 0, 0.5) 0%,
+    rgba(255, 0, 0, 0) 40%
+  );
+}
+
+#Artist {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: aliceblue;
+  text-align: center;
+}
+
+#play-button {
+  position: absolute;
+  width: 200px;
+  height: 80px;
+  background-color: white;
+  bottom: 20px;
+  left: 20px;
+  border-radius: 10%;
+  transform: translateX(-1000px);
+  transition: transform 0.75s;
+  opacity: 80%;
+}
+
+#image-card:hover #play-button {
+  transform: translateX(0px);
+}
+
+/* #Artist:hover #Album { */
+  /* transform: translateX(400px); */
+}
+
+#text {
+  position: absolute;
+  top: 15px;
+  bottom: 0;
+  left: 21px;
+  right: 0;
+  user-select: "none";
+  width: 0;
+  height: 0;
+  margin: 0;
+  border-style: solid;
+  border-width: 9px 0 9px 12px;
+  border-color: transparent transparent transparent white;
+  
+}
+
+#text, span{
+  font-style: italic;
+  font-family: sans-serif;
+  font-size: 1.5em;
+  font-weight: bolder;
+  padding-left: 50px; 
+  padding-top: 25px;
+}
+
+
+#save-button {
+  position: absolute;
+  display: inline;
+  top: px;
+  bottom: 17px;
+  left: 250px;
+  right: 0;
+  user-select: "none";
+  width: 50px;
+  height: 50px;
+  margin: 20px;
   border-radius: 30px;
+  opacity: 80%;
+
+}
+
+#save-button:hover #save-button{
+  transform: translateY(-1000px);
+}
+
+
+#3dots {
+  position: absolute;
+  display: inline;
+  top: px;
+  bottom: 17px;
+  left: 450px;
+  right: 0;
+  user-select: "none";
+  width: 50px;
+  height: 50px;
+  margin: 20px;
+  border-radius: 30px;
+  opacity: 70%;
+}
+
+
+#redSave {
+  width: 400px;
+  height: 450px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  top: 15vh;
+  border-radius: 30px;
+  
+  transition: 300ms;
+}
+
+#redSave, span{
+  font-size: larger;
 }
